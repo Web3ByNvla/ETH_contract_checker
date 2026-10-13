@@ -15,7 +15,7 @@ python -m pip install web3 python-dotenv
 Create a `.env` file in the project root and add your provider's RPC URL:
 
 ```env
-VAR_RPC_=https://ton-endpoint-rpc
+VAR_RPC_=https://your-endpoint-rpc
 ```
 
 Keep this URL private if it contains an API key. Git ignores the `.env` file.
