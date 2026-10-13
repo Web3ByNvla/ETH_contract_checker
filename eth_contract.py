@@ -1,6 +1,7 @@
 import os
 from web3 import Web3
 from dotenv import load_dotenv
+
 load_dotenv()
 
 rpc_end_point = os.getenv("VAR_RPC_")
@@ -34,12 +35,12 @@ def show_contract(address_contract):
         print("-------------")
 
     else :
-        print("this is a contract address")
+        print("This is a contract address")
         print("-------------")
         print(f"Address balance is : {web3.eth.get_balance(address_contract)} eth")
 
 def main():
-    get_address = input("enter your address : ").strip()
+    get_address = input("Enter your address : ").strip()
     if not(check_is_address_valid(get_address)):
         raise RuntimeError("Invalid address format")
     get_address = web3.to_checksum_address(get_address)
